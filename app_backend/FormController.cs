@@ -27,6 +27,7 @@ namespace appbackend.Controllers
             }
 
             // Add our new submission
+            submission.Id = submissions.Count + 1; // Simple ID generation based on count. Will be used for sorting later on.
             submissions.Add(submission);
 
             //Save the updated list back to the file as JSON
