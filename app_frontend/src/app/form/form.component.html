@@ -1,0 +1,41 @@
+<div class="form-container">
+    <h2>BidOne Query Form</h2>
+
+    <!-- Form group for the first name input field. -->
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input
+            id="firstName"
+            type="text"
+            [(ngModel)]="firstName"
+            placeholder="Enter your first name"
+        />
+    </div>
+
+    <!-- Form group for the last name input field. -->
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input
+            id="lastName"
+            type="text"
+            [(ngModel)]="lastName"
+            placeholder="Enter your last name"
+        />
+    </div>
+
+    <!-- Form group for the description input text field. -->
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea
+            id="description"
+            [(ngModel)]="description"
+            placeholder="State your issue here"
+        ></textarea>
+    </div>
+
+    <button (click)="onSubmit()">Submit</button>
+
+    <p *ngIf="message" [class.success]="!isError" [class.error]="isError">
+        {{ message }}
+    </p>
+</div>

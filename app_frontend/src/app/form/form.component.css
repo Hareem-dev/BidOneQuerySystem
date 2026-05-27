@@ -1,0 +1,68 @@
+.form-container {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 32px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical;                   /* Apparently, lets the user resize it vertically but not horizontally */
+    min-height: 100px;                  /* sets the minimum height for the text area, can be adjusted as needed */
+    font-family: Arial, sans-serif;     /* textareas don't inherit a font by default, so I set it here to match the rest of the form */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.success {
+    color:green;
+    margin-top:16px;
+}
+
+.error {
+    color: red;
+    margin-top: 16px;
+}
