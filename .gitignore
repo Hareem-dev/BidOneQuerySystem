@@ -1,52 +1,23 @@
-# Prerequisites
-*.d
+# ========================
+# .NET Core / Backend
+# ========================
+app_backend/bin/
+app_backend//obj/
+app_backend//*.user
+app_backend//.vs/
+app_backend//submissions.json
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# ========================
+# Angular / Frontend
+# ========================
+app_frontend/node_modules/
+app_frontend/dist/
+app_frontend/.angular/
 
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# ========================
+# General
+# ========================
+.DS_Store
+Thumbs.db
+*.log
+.env
