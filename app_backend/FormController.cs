@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using appbackend.Models;
 
+// Controller class which derives from Controller base. This is how data is passed to and from the angular frontend.
 namespace appbackend.Controllers
 {
     [ApiController]
@@ -22,8 +24,10 @@ namespace appbackend.Controllers
             if (System.IO.File.Exists(_filePath))
             {
                 var existing = System.IO.File.ReadAllText(_filePath);
-                submissions = JsonSerializer.Deserialize<List<FormSubObj>>(existing) 
-                                                                    ?? new List<FormSubObj>();
+                submissions = JsonSerializer.Deserialize<List<FormSubObj>>(existing, new JsonSerializerOptions
+                {
+                    Converters = { new JsonStringEnumConverter() }
+                }) ?? new List<FormSubObj>();
             }
 
             // Add our new submission
@@ -33,7 +37,8 @@ namespace appbackend.Controllers
             //Save the updated list back to the file as JSON
             var json = JsonSerializer.Serialize(submissions, new JsonSerializerOptions
             {
-                WriteIndented = true
+                WriteIndented = true,
+                Converters = { new JsonStringEnumConverter() } // This will convert our enum to a string in the JSON file for better readability.
             });
             System.IO.File.WriteAllText(_filePath, json);
 
