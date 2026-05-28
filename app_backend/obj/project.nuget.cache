@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KiATl1CbH2s=",
+  "dgSpecHash": "zi5uwkgpK40=",
   "success": true,
-  "projectFilePath": "C:\\BidOneTechnical\\AAlvarez_BidOneQuerySystem_TechnicalInterview2026\\app_backend\\app_backend.csproj",
+  "projectFilePath": "C:\\BidOneTechnical\\BidOneQuerySystem\\app_backend\\app_backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aliex\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.8\\microsoft.aspnetcore.openapi.10.0.8.nupkg.sha512",
     "C:\\Users\\aliex\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"

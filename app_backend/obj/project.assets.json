@@ -88,11 +88,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\BidOneTechnical\\AAlvarez_BidOneQuerySystem_TechnicalInterview2026\\app_backend\\app_backend.csproj",
+      "projectUniqueName": "C:\\BidOneTechnical\\BidOneQuerySystem\\app_backend\\app_backend.csproj",
       "projectName": "app_backend",
-      "projectPath": "C:\\BidOneTechnical\\AAlvarez_BidOneQuerySystem_TechnicalInterview2026\\app_backend\\app_backend.csproj",
+      "projectPath": "C:\\BidOneTechnical\\BidOneQuerySystem\\app_backend\\app_backend.csproj",
       "packagesPath": "C:\\Users\\aliex\\.nuget\\packages\\",
-      "outputPath": "C:\\BidOneTechnical\\AAlvarez_BidOneQuerySystem_TechnicalInterview2026\\app_backend\\obj\\",
+      "outputPath": "C:\\BidOneTechnical\\BidOneQuerySystem\\app_backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aliex\\AppData\\Roaming\\NuGet\\NuGet.Config",

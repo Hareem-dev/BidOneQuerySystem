@@ -31,6 +31,14 @@ input {
     font-size: 14px;
 }
 
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white; /* Ensures the dropdown has a white background */
+}
+
 textarea {
     padding: 10px;
     border: 1px solid #ccc;
