@@ -28,7 +28,7 @@
         <label for="issue">What is your issue?</label>
         <select id="issue" [(ngModel)]="issue">
             <option value="" disabled selected>Select your issue type</option>
-            <option *ngFor="let type of issuetypes" [value]="type.value">{{ type.label }}</option>
+            <option *ngFor="let type of issueTypes" [value]="type.value">{{ type.label }}</option>
         </select>
     </div>
 

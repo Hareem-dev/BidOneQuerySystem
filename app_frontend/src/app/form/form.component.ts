@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { environment } from '../../environments/environment';
+import { formatEnumValue } from '../utils/general-utils';
+import { API_ENDPOINTS } from '../utils/api-constants';
 
 @Component({
   selector: 'app-form',
@@ -11,24 +13,34 @@ import { environment } from '../../environments/environment';
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'
 })
-export class FormComponent {
+export class FormComponent implements OnInit{
   firstName: string = '';
   lastName: string = '';
-  // NEW feature to allow users to select the type of issue they are dealing with.
-  // issue types is hard coded for now until I learn GET requests.
+  // feature to allow users to select the type of issue they are dealing with.
   issue: string = '';
-  issuetypes: { label: string; value: string }[] = [
-    { label: 'Lost Order', value: 'LostOrder' },
-    { label: 'Wrong Item', value: 'WrongItem' },
-    { label: 'Website Issue', value: 'WebsiteIssue' },
-    { label: 'Other', value: 'Other' }
-  ];
-
+  //Start with an empty array. We populate it using the GET request.
+  issueTypes: { label: string; value: string }[] = [];
   description: string = '';
   message: string = '';
   isError: boolean = false;
 
   constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    // Fetch issue types from the backend when the component initializes.
+    this.http.get<string[]>(API_ENDPOINTS.GET_ISSUE_TYPES)
+      .subscribe({
+        next: (data) => {
+          this.issueTypes = data.map(value => ({ label: formatEnumValue(value), value: value }));
+        },
+        error: () => {
+          // If this fails, we respond back with failed to load resources.
+          this.message = 'Failed to load resources. Please try again later.';
+          this.isError = true;
+        }
+      });
+  }
+
 
   // Im assubing onSubmit is like an event trigger from Unity C#.
   // I would attach this to buttons or UI elements back in game development.
@@ -49,7 +61,7 @@ export class FormComponent {
 
     // post uses an address which can be changed in the environment file found in
     // src/environments/environment.ts if your backend is running on a different port, please change the apiUrl value in that file.
-    this.http.post(`${environment.apiUrl}/api/form`, payload)
+    this.http.post(API_ENDPOINTS.SUBMIT_FORM, payload)
     .subscribe({
       next: () => {
         this.message = 'Form submitted successfully!';

@@ -1,0 +1,25 @@
+nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #71aff1;
+}
+
+nav a.active {
+    font-weight: bold;
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+}
