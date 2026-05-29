@@ -1,0 +1,32 @@
+<div class="query-list-container">
+    <h2>BidOne Query List</h2>
+    <p>Below are the list of queries previously submitted.</p>
+
+    <!-- Error message display if we fail to load queries. -->
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Issue Type</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- If we have no queries, we show a message to the user instead of an empty table. -->
+            <tr *ngIf="!queries || queries.length === 0">
+                <td colspan="4">No queries submitted yet.</td>
+            </tr>
+            
+            <tr *ngFor="let query of queries">
+                <td>{{ query.firstName }}</td>
+                <td>{{ query.lastName }}</td>
+                <td>{{ query.issue }}</td>
+                <td>{{ query.description }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
