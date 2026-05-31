@@ -1,25 +1,31 @@
 nav {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 12px 20px;
+    background-color: #1B9AD6;
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 16px;
+    font-family: Arial, sans-serif;
 }
 
 nav a {
     text-decoration: none;
-    color: #71aff1;
+    color: #FFFFFF;
 }
 
 nav a.active {
     font-weight: bold;
-    color: #0056b3;
-    border-bottom: 2px solid #0056b3;
+    color: #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
 }
 
 nav a:hover {
     text-decoration: underline;
+    color: #1A6B9A;
 }
 
 nav {
-    background-color: #f8f9fa;
+    background-color: #1B9AD6;
     padding: 1.5rem;
 }
