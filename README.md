@@ -76,6 +76,8 @@ dotnet run
 
 cd app_frontend
 
+npm install
+
 ng serve
 
 ```
