@@ -20,7 +20,7 @@ BidOne Query System was designed from specifications given by the BidOne Technic
 
 Once again, Thank you Noel and Nitin for this incredible opportunity!
 
-&#x20;
+
 
 \## Architecture Overview
 
@@ -28,7 +28,7 @@ The default configured port is 5216 within the project. If the port needs to be 
 
 Angular (Port 4200) → HTTP POST/GET → .NET API (Port 5216) → Submissions.json
 
-&#x20;
+
 
 \## Project Structure
 
@@ -46,13 +46,13 @@ BidOneQuerySystem/
 
 └── app\_frontend/             ← Angular application
 
-&#x20;   └── src/app/
+	 └── src/app/
 
-&#x20;       ├── form/             ← Query submission form
+	     ├── form/             ← Query submission form
 
-&#x20;       ├── query-list/       ← Query list viewer
+	     ├── query-list/       ← Query list viewer
 
-&#x20;       └── utils/            ← Shared utility functions
+	     └── utils/            ← Shared utility functions
 
 ``` 
 
@@ -88,13 +88,13 @@ Submits a new query and saves it to `submissions.json`.
 
 {
 
-&#x20; "firstName": "John",
+       "firstName": "John",
 
-&#x20; "lastName": "Doe",
+       "lastName": "Doe",
 
-&#x20; "issue": "LostOrder",
+       "issue": "LostOrder",
 
-&#x20; "description": "My order has not arrived."
+       "description": "My order has not arrived."
 
 }
 
@@ -108,8 +108,8 @@ Submits a new query and saves it to `submissions.json`.
 
 {
 
-&#x20; "message": "Submission received and saved."
-
+       "message": "Submission received and saved."
+       
 }
 
 ```
@@ -132,19 +132,19 @@ Retrieves all submitted queries sorted by ID in descending order (newest first).
 
 \[
 
-&#x20; {
+       {
 
-&#x20;   "id": 2,
+         "id": 2,
 
-&#x20;   "firstName": "John",
+         "firstName": "John",
 
-&#x20;   "lastName": "Doe",
+         "lastName": "Doe",
 
-&#x20;   "issue": "LostOrder",
+         "issue": "LostOrder",
 
-&#x20;   "description": "My order has not arrived."
+         "description": "My order has not arrived."
 
-&#x20; }
+       }
 
 ]
 
@@ -168,13 +168,13 @@ Retrieves all available issue types dynamically from the backend enum.
 
 \[
 
-&#x20; "LostOrder",
+       "LostOrder",
 
-&#x20; "WrongItem",
+       "WrongItem",
 
-&#x20; "WebsiteIssue",
+       "WebsiteIssue",
 
-&#x20; "Other"
+       "Other"
 
 ]
 
