@@ -1,20 +1,20 @@
-\# BidOne Query System
+# BidOne Query System
 
-\*\*Aliexis Alvarez | Technical Design Doc | 2026\*\*
-
-
+**Aliexis Alvarez | Technical Design Doc | 2026**
 
 
 
-\## Project Summary
+
+
+## Project Summary
 
 BidOne Query System was designed from specifications given by the BidOne Technical Test. The goal is to create a system that mimics a helper form which can be used by members of any BidOne website. The extra functionalities include:
 
-\- ID, Issue type, and description parameters
+- ID, Issue type, and description parameters
 
-\- Existing submissions / query table
+- Existing submissions / query table
 
-\- Technical documentation
+- Technical documentation
 
 
 
@@ -22,7 +22,7 @@ Once again, Thank you Noel and Nitin for this incredible opportunity!
 
 
 
-\## Architecture Overview
+## Architecture Overview
 
 The default configured port is 5216 within the project. If the port needs to be reconfigured, it can be found in app\_frontend/src/environments/environment.ts.
 
@@ -30,7 +30,7 @@ Angular (Port 4200) → HTTP POST/GET → .NET API (Port 5216) → Submissions.j
 
 
 
-\## Project Structure
+## Project Structure
 
 ```
 
@@ -58,13 +58,13 @@ BidOneQuerySystem/
 
 
 
-\## Design Decisions
+## Design Decisions
 
 Angular 4+ frontend posting to a Web API backend (.NET Core) has been chosen after research and determining that this pipeline is more standard than an MVC application. Both Angular and .NET Core are new technologies except for the C# portions for .NET Core. Overall, Learning typescript and .NET POST GET operations were exciting and enjoyable within the one-week sprint.
 
 
 
-\## API Endpoints
+## API Endpoints
 
 
 
@@ -72,17 +72,17 @@ Base URL: `http://localhost:5216`
 
 
 
-\---
+---
 
 
 
-\### POST `/api/form`
+### POST `/api/form`
 
 Submits a new query and saves it to `submissions.json`.
 
 
 
-\*\*Request Body:\*\*
+**Request Body:**
 
 ```json
 
@@ -102,7 +102,7 @@ Submits a new query and saves it to `submissions.json`.
 
 
 
-\*\*Response:\*\*
+**Response:**
 
 ```json
 
@@ -116,21 +116,21 @@ Submits a new query and saves it to `submissions.json`.
 
 
 
-\---
+---
 
 
 
-\### GET `/api/form/Submissions`
+### GET `/api/form/Submissions`
 
 Retrieves all submitted queries sorted by ID in descending order (newest first).
 
 
 
-\*\*Response:\*\*
+**Response:**
 
 ```json
 
-\[
+[
 
        {
 
@@ -152,21 +152,21 @@ Retrieves all submitted queries sorted by ID in descending order (newest first).
 
 
 
-\---
+---
 
 
 
-\### GET `/api/form/Resources`
+### GET `/api/form/Resources`
 
 Retrieves all available issue types dynamically from the backend enum.
 
 
 
-\*\*Response:\*\*
+**Response:**
 
 ```json
 
-\[
+[
 
        "LostOrder",
 
@@ -182,29 +182,24 @@ Retrieves all available issue types dynamically from the backend enum.
 
 
 
-&#x20;
+## Future Improvements
 
-\## Future Improvements
-
-\### Basic HTML \& CSS design
+### Basic HTML \& CSS design
 
 The HTML and CSS design of the website can be improved greatly for UI / UX considerations.
 
-\### Database implementation
+### Database implementation
 
 A database like MySQL can be implemented over .JSON files as a major improvement.
 
-\### No authentication
+### No authentication
 
 An admin system can easily be created and configured to hide the existing queries section.
 
-\### Sorting system
+### Sorting system
 
 A sorting system for the view queries component can be created to display specific submissions.
 
-&#x20;
-
-&#x20;
 
 
 
