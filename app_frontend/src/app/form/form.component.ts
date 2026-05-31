@@ -42,7 +42,7 @@ export class FormComponent implements OnInit{
   }
 
 
-  // Im assubing onSubmit is like an event trigger from Unity C#.
+  // Im assuming onSubmit is like an event trigger from Unity C#.
   // I would attach this to buttons or UI elements back in game development.
   onSubmit() {
     // Basic Validation
