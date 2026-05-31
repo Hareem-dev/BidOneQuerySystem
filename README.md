@@ -2,56 +2,103 @@
 
 
 
-Query system designed and built for Bid One's stage 2 technical test. I decided to create a query system which could help engineers and other admin look into issues posted by consumers and wholesalers. With the whole idea of 'never lose an order', this program simulates a sort of "help" or "issue" tracker that can be expanded to add other functionality. I've tried to make the program as open ended as possible and kept to Object Oriented Programming schemes as best as I could.
+Query system designed and built for Bid One's stage 2 technical test. Features two-way communication between frontend web api and backend .NET architecture.
+
+Users can submit and view existing help requests! Ideally, the view existing requests will be designated to an admin section for BidOne employees.
 
 
 
-Going into this, I had no experience with Angular and .NET, with .NET being a bit easier to get into because of the C# background. I definitely struggled the most with Angular's Typescript, HTML, and CSS workings but tried my best to keep it simple.
+###### **Tech Stack**
 
+Frontend: Angular 17
 
-Overall, I enjoyed this technical project and hoped that my program aligns with some of the work I could be doing at BidOne!
+Backend: .NET Core Web API
 
-
-
-
-
-**Prerequisites**
-*Node.js*
-
-*.NET Core SDK*
-
-*Angular CLI Version 17*
+Data Storage: JSON file
 
 
 
-###### **Functions**
+###### **Prerequisites**
 
-Working backend that receives post operations from the frontend.
+Before running this project, make sure you have the following installed:
 
-Angular web front which features two input fields for first name and last name.
+*Node.js v20 LTS*
 
-an extra input field has been added for description.
+*.NET Core SDK 8.0+*
 
-Each submission in the frontend is given an iterative ID in the backend which can be used for sorting purposes.
-
-JSON file is created in the ***'app\_backend'*** folder.
+*Angular CLI v17 — install with npm install -g @angular/cli*
 
 
 
-###### **Methods**
+###### **Features**
 
-1. Open a terminal.
-2. Navigate to **\\BidOneQuerySystem\\app\_backend** within the terminal.
-3. execute ***'dotnet run'*** to start the backend service.
-4. Navigate to **\\BidOneQuerySystem\\app\_frontend** within the terminal.
-5. execute ***'ng serve'*** to start the frontend service.
-6. open a browser to 'http://localhost:4200' (Default port or the port specified in the terminal).
-7. fill in the form.
-8. Once the submit button has been pressed and the success message is displayed, Navigate to **/BidOneQuerySystem/app\_backend** and find the **'submissions.json'** file. Open in browser or navigate to the file within VSCode or similar and you will find the submitted data
+Submit a help request via a form with first name, last name, issue type and description fields.
+
+Select an issue type from a dropdown populated dynamically from the backend.
+
+View all previously submitted queries in a sorted query list (sorted by descending ID).
+
+Navigate between components using the navigation bar.
+
+***Submitted data is saved to submissions.json in the app\_backend folder.***
 
 
 
-Made by Aliexis Alvarez 2026.
+###### **Getting started**
 
-Thank you Noel and Nitin for giving me this opportunity!
+This project requires two terminals running simultaneously.
+
+
+
+```bash
+
+*Terminal 1 — Backend:*
+
+bashcd BidOneQuerySystem/app\_backend
+
+dotnet run
+
+```
+
+
+
+```bash
+
+*Terminal 2 — Frontend:*
+
+bashcd BidOneQuerySystem/app\_frontend
+
+ng serve
+
+```
+
+
+
+Then open your browser and navigate to http://localhost:4200.
+
+Note: If your backend runs on a different port than 5216, update the apiUrl in app\_frontend/src/environments/environment.ts to match.
+
+Note: submissions.json will be created automatically on first submission.
+
+
+
+Extra
+
+API Endpoints (available through 'app\_frontend/src/app/utils/api-constants.ts'
+
+Method: POST - '/api/form' - Submit a new query.
+
+Method: GET - '/api/form/Submissions' - Retrieve all submitted queries.
+
+Method: GET - '/api/form/Resources' - Retrieve available issue types.
+
+
+
+Application backend can be explicitly tested through Postman or any API client. (I used Postman to test and verify backend)
+
+
+
+
+
+*Made by Aliexis Alvarez 2026. Thank you Noel and Nitin for giving me this opportunity!*
 
