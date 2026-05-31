@@ -48,13 +48,21 @@ Navigate between components using the navigation bar.
 
 This project requires two terminals running simultaneously.
 
+Clone the repository:
+```bash
+
+git clone https://github.com/yourusername/BidOne_QuerySystem
+cd BidOneQuerySystem
+
+```
+
 
 
 ```bash
 
 *Terminal 1 — Backend:*
 
-bashcd BidOneQuerySystem/app\_backend
+cd app_backend
 
 dotnet run
 
@@ -66,7 +74,7 @@ dotnet run
 
 *Terminal 2 — Frontend:*
 
-bashcd BidOneQuerySystem/app\_frontend
+cd app_frontend
 
 ng serve
 
@@ -82,7 +90,7 @@ Note: submissions.json will be created automatically on first submission.
 
 
 
-Extra
+###### **Extra**
 
 API Endpoints (available through 'app\_frontend/src/app/utils/api-constants.ts'
 
