@@ -51,7 +51,7 @@ This project requires two terminals running simultaneously.
 Clone the repository:
 ```bash
 
-git clone https://github.com/yourusername/BidOne_QuerySystem
+git clone https://github.com/yourusername/BidOneQuerySystem
 cd BidOneQuerySystem
 
 ```
